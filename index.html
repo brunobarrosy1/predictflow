@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PalpiteFlow — Previsões ao Vivo</title>
+<title>PredictFlow — Previsões ao Vivo</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
@@ -1304,7 +1304,7 @@
   /* ── DEPOSIT MODAL ── */
   .deposit-amounts {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 8px;
     margin-bottom: 16px;
   }
@@ -1432,7 +1432,7 @@
 <!-- LOGIN SCREEN -->
 <div id="login-screen">
   <div class="login-card">
-    <div class="login-logo">⚡ PalpiteFlow</div>
+    <div class="login-logo">⚡ PredictFlow</div>
     <div class="login-sub" id="login-sub-text">Mercado de previsões ao vivo</div>
 
     <!-- Tabs -->
@@ -1465,7 +1465,7 @@
 <header>
   <div class="logo">
     <div class="logo-dot"></div>
-    PalpiteFlow
+    PredictFlow
   </div>
   <div class="header-right">
     <div class="balance-chip" id="balance-display">
@@ -1485,11 +1485,11 @@
 
   <!-- CATEGORY TABS -->
   <div class="category-tabs" id="category-tabs">
-    <button class="cat-tab active" onclick="selectCategory('transito')">🚗 Trânsito</button>
-    <button class="cat-tab" onclick="selectCategory('pedestre')">🚶 Pedestre</button>
-    <button class="cat-tab" onclick="selectCategory('animais')">🐾 Animais</button>
-    <button class="cat-tab" onclick="selectCategory('futebol')">🏆 Esportes</button>
-    <button class="cat-tab" onclick="selectCategory('bitcoin')">₿ Bitcoin</button>
+    <button class="cat-tab active" onclick="selectCategory('transito')">Trânsito</button>
+    <button class="cat-tab" onclick="selectCategory('pedestre')">Pedestre</button>
+    <button class="cat-tab" onclick="selectCategory('animais')">Animais</button>
+    <button class="cat-tab" onclick="selectCategory('futebol')">Esportes ao Vivo</button>
+    <button class="cat-tab" onclick="selectCategory('bitcoin')">Bitcoin</button>
   </div>
 
   <!-- VIDEO SECTION — por categoria -->
@@ -1553,13 +1553,13 @@
     <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;flex-wrap:wrap;gap:10px;">
       <h3 style="margin:0;">⚙️ Painel Admin</h3>
       <div style="display:flex;gap:8px;flex-wrap:wrap;">
-        <button class="admin-nav-btn active" id="anav-results" onclick="adminTab('results')">🎯 Resultados</button>
-        <button class="admin-nav-btn" id="anav-markets" onclick="adminTab('markets')">📋 Mercados</button>
-        <button class="admin-nav-btn" id="anav-categories" onclick="adminTab('categories')">🗂️ Categorias</button>
-        <button class="admin-nav-btn" id="anav-users" onclick="adminTab('users')">👥 Usuários</button>
-        <button class="admin-nav-btn" id="anav-bets" onclick="adminTab('bets')">🎲 Apostas</button>
-        <button class="admin-nav-btn" id="anav-finance" onclick="adminTab('finance')">💰 Financeiro</button>
-        <button class="admin-nav-btn" id="anav-tools" onclick="adminTab('tools')">🔧 Ferramentas</button>
+        <button class="admin-nav-btn active" id="anav-results" onclick="adminTab('results')">Resultados</button>
+        <button class="admin-nav-btn" id="anav-markets" onclick="adminTab('markets')">Mercados</button>
+        <button class="admin-nav-btn" id="anav-categories" onclick="adminTab('categories')">Categorias</button>
+        <button class="admin-nav-btn" id="anav-users" onclick="adminTab('users')">Usuários</button>
+        <button class="admin-nav-btn" id="anav-bets" onclick="adminTab('bets')">Palpites</button>
+        <button class="admin-nav-btn" id="anav-finance" onclick="adminTab('finance')">Financeiro</button>
+        <button class="admin-nav-btn" id="anav-tools" onclick="adminTab('tools')">Ferramentas</button>
       </div>
     </div>
 
@@ -1845,12 +1845,15 @@
     <h2>💳 Depositar</h2>
     <p>Selecione o valor ou insira manualmente. (Simulado para MVP)</p>
     <div class="deposit-amounts">
-      <button class="deposit-amount-btn" onclick="selectDeposit(20)">R$20</button>
-      <button class="deposit-amount-btn" onclick="selectDeposit(50)">R$50</button>
-      <button class="deposit-amount-btn" onclick="selectDeposit(100)">R$100</button>
-      <button class="deposit-amount-btn" onclick="selectDeposit(200)">R$200</button>
-      <button class="deposit-amount-btn" onclick="selectDeposit(500)">R$500</button>
-      <button class="deposit-amount-btn" id="custom-deposit-btn" onclick="selectDeposit(0)">Outro</button>
+      <button class="deposit-amount-btn" onclick="selectDeposit(87)">R$87</button>
+      <button class="deposit-amount-btn" onclick="selectDeposit(153)">R$153</button>
+      <button class="deposit-amount-btn" onclick="selectDeposit(219)">R$219</button>
+      <button class="deposit-amount-btn" onclick="selectDeposit(374)">R$374</button>
+      <button class="deposit-amount-btn" onclick="selectDeposit(891)">R$891</button>
+      <button class="deposit-amount-btn" onclick="selectDeposit(1340)">R$1.340</button>
+      <button class="deposit-amount-btn" onclick="selectDeposit(2180)">R$2.180</button>
+      <button class="deposit-amount-btn" onclick="selectDeposit(3750)">R$3.750</button>
+      <button class="deposit-amount-btn" id="custom-deposit-btn" onclick="selectDeposit(0)">Outro valor</button>
     </div>
     <input class="modal-input" id="deposit-amount-input" type="number" placeholder="Valor (R$)" style="display:none">
     <div class="modal-actions">
@@ -1907,7 +1910,7 @@ const HOUSE_EDGE = HOUSE_EDGE_VAL; // legacy alias
 // ─────────────────────────────────────────────
 const CATEGORIES = {
   transito: {
-    label: '🚗 Trânsito',
+    label: 'Trânsito',
     videoUrl: '',
     markets: [
       { id: 'tr1', title: 'Próximo veículo será:', duration: 60, options: ['Carro', 'Moto', 'Caminhão', 'Bicicleta'] },
@@ -1919,7 +1922,7 @@ const CATEGORIES = {
     ]
   },
   pedestre: {
-    label: '🚶 Pedestre',
+    label: 'Pedestre',
     videoUrl: '',
     markets: [
       { id: 'pe1', title: 'Próxima pessoa a passar é:', duration: 60, options: ['Homem', 'Mulher'] },
@@ -1931,7 +1934,7 @@ const CATEGORIES = {
     ]
   },
   animais: {
-    label: '🐾 Animais',
+    label: 'Animais',
     videoUrl: '',
     markets: [
       { id: 'an1', title: 'Próximo animal que aparecer:', duration: 120, options: ['Cachorro', 'Gato', 'Pássaro', 'Outro'] },
@@ -1943,7 +1946,7 @@ const CATEGORIES = {
     ]
   },
   futebol: {
-    label: '🏆 Esportes ao Vivo',
+    label: 'Esportes ao Vivo',
     videoUrl: '',
     markets: [
       { id: 'ft1', title: 'Vai sair gol nos próximos 5 minutos?', duration: 300, options: ['Sim', 'Não'] },
@@ -1955,7 +1958,7 @@ const CATEGORIES = {
     ]
   },
   bitcoin: {
-    label: '₿ Bitcoin',
+    label: 'Bitcoin',
     videoUrl: 'https://www.youtube.com/embed/videoseries?list=PLq_bUm4bHyRiGCX0qxkOQUkE0vOiN6Yo2&autoplay=1&mute=1',
     markets: [
       { id: 'bt1', title: 'Bitcoin sobe nos próximos 3 minutos?', duration: 180, options: ['Sobe 📈', 'Cai 📉'] },
@@ -2039,11 +2042,9 @@ async function syncBalanceFromDB() {
   if (data) {
     STATE.balance = parseFloat(data.balance) || 0;
     STATE.user.name = data.name || STATE.user.name;
-    // Never downgrade admin — email check is authoritative
-    if (data.is_admin) STATE.user.is_admin = true;
+    STATE.user.is_admin = data.is_admin;
     updateBalanceDisplay();
-    const adminBtn2 = document.getElementById('admin-toggle');
-    if (adminBtn2) adminBtn2.style.display = STATE.user.is_admin ? 'inline-flex' : 'none';
+    if (data.is_admin) document.getElementById('admin-toggle').style.display = 'inline-flex';
   }
 }
 
@@ -2146,20 +2147,16 @@ async function loginAnon() {
   await handleAuthSession(data.session);
 }
 
-const ADMIN_EMAIL = 'brunobarrosms@hotmail.com';
-
 async function handleAuthSession(session) {
   STATE.supabaseSession = session;
   const userId = session.user.id;
-  const userEmail = session.user.email || '';
   // Busca perfil
   const { data: profile } = await sb.from('profiles').select('*').eq('id', userId).single();
-  const isAdmin = userEmail.toLowerCase() === ADMIN_EMAIL.toLowerCase() || profile?.is_admin === true;
   STATE.user = {
     id: userId,
-    name: profile?.name || session.user.user_metadata?.name || userEmail.split('@')[0] || 'Usuário',
-    email: userEmail,
-    is_admin: isAdmin,
+    name: profile?.name || session.user.user_metadata?.name || session.user.email?.split('@')[0] || 'Usuário',
+    email: session.user.email,
+    is_admin: profile?.is_admin || false,
     type: 'supabase'
   };
   STATE.balance = parseFloat(profile?.balance || 100);
@@ -2178,24 +2175,10 @@ async function handleSignOut() {
   location.reload();
 }
 
-function renderCategoryTabs() {
-  const container = document.getElementById('category-tabs');
-  if (!container) return;
-  container.innerHTML = '';
-  Object.entries(CATEGORIES).forEach(([key, cat], idx) => {
-    const btn = document.createElement('button');
-    btn.className = 'cat-tab' + (key === activeCategory ? ' active' : '');
-    btn.textContent = cat.label;
-    btn.onclick = () => selectCategory(key);
-    container.appendChild(btn);
-  });
-}
-
 function startApp() {
   try {
     document.getElementById('login-screen').classList.add('hidden');
-    const adminBtn = document.getElementById('admin-toggle');
-    if (adminBtn) adminBtn.style.display = STATE.user?.is_admin ? 'inline-flex' : 'none';
+    if (STATE.user?.is_admin) document.getElementById('admin-toggle').style.display = 'inline-flex';
     document.getElementById('signout-btn').style.display = 'inline-flex';
     updateBalanceDisplay();
     activeCategory = 'transito';
@@ -2212,7 +2195,7 @@ function startApp() {
     showToast('Bem-vindo(a), ' + STATE.user.name + '! 🎉 Bônus de R$100 adicionado', 'info');
   } catch(e) {
     console.error('startApp error:', e);
-    console.error('startApp error:', e);
+    alert('Erro ao iniciar: ' + e.message);
   }
 }
 
@@ -2630,6 +2613,65 @@ function animateBetConfirm(mId) {
 // ─────────────────────────────────────────────
 //  ADMIN
 // ─────────────────────────────────────────────
+function saveAdminState() {
+  // Persiste videoUrl e videoBackup de cada categoria no localStorage
+  const state = {};
+  Object.entries(CATEGORIES).forEach(([key, cat]) => {
+    state[key] = { videoUrl: cat.videoUrl || '', videoBackup: cat.videoBackup || '' };
+  });
+  localStorage.setItem('pf_admin_state', JSON.stringify(state));
+}
+
+function loadAdminState() {
+  try {
+    const saved = JSON.parse(localStorage.getItem('pf_admin_state') || '{}');
+    Object.entries(saved).forEach(([key, val]) => {
+      if (CATEGORIES[key]) {
+        CATEGORIES[key].videoUrl = val.videoUrl || '';
+        CATEGORIES[key].videoBackup = val.videoBackup || '';
+      }
+    });
+  } catch(e) {}
+}
+
+function renderAdmin() {
+  const catLabel = document.getElementById('admin-cat-label');
+  if (catLabel) catLabel.textContent = CATEGORIES[activeCategory]?.label || activeCategory;
+
+  const grid = document.getElementById('admin-grid');
+  if (!grid) return;
+
+  const catDefs = MARKETS_DEF.filter(d => d.catKey === activeCategory);
+  if (!catDefs.length) {
+    grid.innerHTML = '<div style="color:var(--muted);font-size:13px;padding:16px;">Nenhum mercado nesta categoria.</div>';
+    return;
+  }
+
+  grid.innerHTML = catDefs.map(def => {
+    const m = markets[def.id];
+    const totalPool = Object.values(m.pools).reduce((a, b) => a + b, 0);
+    const statusColor = m.status === 'open' ? 'var(--green)' : m.status === 'resolved' ? 'var(--accent)' : 'var(--gold)';
+    return `
+      <div class="admin-card">
+        <div class="admin-card-title" style="margin-bottom:8px;line-height:1.4;">${def.title}</div>
+        <div style="font-size:11px;color:${statusColor};font-family:'JetBrains Mono',monospace;margin-bottom:10px;text-transform:uppercase;">
+          ${m.status} · R$${totalPool.toFixed(2)} no pool
+        </div>
+        <div class="admin-options">
+          ${def.options.map(opt => {
+            const pool = m.pools[opt] || 0;
+            const pct = totalPool > 0 ? Math.round((pool / totalPool) * 100) : 0;
+            return `<button class="admin-resolve-btn" onclick="resolveMarket('${def.id}', '${opt}')"
+              style="${m.winner === opt ? 'border-color:var(--green);color:var(--green);' : ''}">
+              ✓ ${opt} <span style="color:var(--muted);font-size:10px;">(${pct}% · R$${pool.toFixed(0)})</span>
+            </button>`;
+          }).join('')}
+        </div>
+      </div>
+    `;
+  }).join('');
+}
+
 function toggleAdmin() {
   const p = document.getElementById('admin-panel');
   p.classList.toggle('open');
@@ -4169,6 +4211,7 @@ function simulateFakeActivity() {
 //  INIT
 // ─────────────────────────────────────────────
 loadState();
+loadAdminState();
 seedFakeBets();
 setTimeout(() => { renderRanking(); oscillateRanking(); }, 100);
 simulateFakeActivity();
